@@ -5,7 +5,8 @@
     @method('PUT')
 
     <input type="text" name="naam" value="{{ $menu->naam }}">
-    <input type="text" name="prijs" value=" {{ $menu->prijs }}">
+    <input type="text" name="prijs" value="
+    {{ $menu->prijs }}">
     <input type="text" name="beschrijving" value="{{ $menu->beschrijving }}">
     <button type="submit">Bijwerken</button>
 </form>
