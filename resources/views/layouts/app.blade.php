@@ -1,36 +1,68 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snackbar De Smulhoek</title>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/snackbar.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <div class="logo">
+        <img src="{{ asset('img.png') }}" alt="Snackbar Logo" height="80">
+        <h1>Snackbar De Smulhoek</h1>
+    </div>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <nav class="nav-left">
+        <a href="{{ route('menu.index') }}">🍔 Menu</a>
+        <a href="{{ route('dashboard') }}">🏠 Dashboard</a>
+        @auth
+            @if(auth()->user()->id === 1)
+                <a href="{{ route('menu.create') }}">➕ Nieuw item</a>
+            @endif
+        @endauth
+    </nav>
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+    <nav class="nav-right">
+        @auth
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn small">🚪 Uitloggen</button>
+            </form>
+        @else
+            <a href="{{ route('login') }}" class="btn small">🔐 Inloggen</a>
+        @endauth
+    </nav>
+</header>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+<main class="site-content">
+    @if (session('success'))
+        <div class="success-message">
+            {{ session('success') }}
         </div>
-    </body>
+    @endif
+
+    @hasSection('content')
+        @yield('content')
+    @else
+        <section class="welkom-container">
+            <div class="welcome-message text-center">
+                <h2 class="text-3xl font-bold mb-4">Welkom bij Snackbar De Smulhoek! 🍟</h2>
+                <p class="text-lg mb-4">Zin in een lekkere snack? Je bent aan het juiste adres!</p>
+                <p class="text-gray-700">Bekijk ons menu, plaats je bestelling of ontdek onze nieuwste specialiteiten.</p>
+
+                <div class="mt-6">
+                    <a href="{{ route('menu.index') }}" class="btn primary">Bekijk ons menu</a>
+                </div>
+            </div>
+        </section>
+    @endif
+</main>
+
+<footer class="site-footer">
+    &copy; {{ date('Y') }} Snackbar De Smulhoek. Alle rechten voorbehouden.
+</footer>
+</body>
 </html>

@@ -6,24 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('menu', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('naam');
+            $table->string('name');
             $table->decimal('prijs');
             $table->text('beschrijving');
 
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('menu');

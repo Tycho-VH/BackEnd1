@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     protected $table = "menu";
-    protected $fillable = ['naam', 'prijs', 'beschrijving'];
+    protected $fillable = ['name', 'prijs', 'beschrijving'];
 }

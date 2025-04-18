@@ -14,44 +14,44 @@ class ProductSeeder extends Seeder
     {
         $products = [
             [
-                'name' => 'Friet met',
-                'description' => 'Portie friet met mayonaise.',
-                'price' => 2.50,
+                'naam' => 'Friet met',
+                'beschrijving' => 'Portie friet met mayonaise.',
+                'prijs' => 2.50,
             ],
             [
-                'name' => 'Frikandel',
-                'description' => 'Gehaktstaaf, typisch Nederlandse snack.',
-                'price' => 1.80,
+                'naam' => 'Frikandel',
+                'beschrijving' => 'Gehaktstaaf, typisch Nederlandse snack.',
+                'prijs' => 1.80,
             ],
             [
-                'name' => 'Kroket',
-                'description' => 'Gevulde vleeskroket met knapperige korst.',
-                'price' => 1.90,
+                'naam' => 'Kroket',
+                'beschrijving' => 'Gevulde vleeskroket met knapperige korst.',
+                'prijs' => 1.90,
             ],
             [
-                'name' => 'Kaassoufflé',
-                'description' => 'Vegetarische snack gevuld met gesmolten kaas.',
-                'price' => 1.70,
+                'naam' => 'Kaassoufflé',
+                'beschrijving' => 'Vegetarische snack gevuld met gesmolten kaas.',
+                'prijs' => 1.70,
             ],
             [
-                'name' => 'Bamischijf',
-                'description' => 'Gefrituurde schijf gevuld met bami.',
-                'price' => 2.00,
+                'naam' => 'Bamischijf',
+                'beschrijving' => 'Gefrituurde schijf gevuld met bami.',
+                'prijs' => 2.00,
             ],
             [
-                'name' => 'Hamburger speciaal',
-                'description' => 'Hamburger met gebakken ui, curry en mayo.',
-                'price' => 3.50,
+                'naam' => 'Hamburger speciaal',
+                'beschrijving' => 'Hamburger met gebakken ui, curry en mayo.',
+                'prijs' => 3.50,
             ],
             [
-                'name' => 'Cola',
-                'description' => 'Koude blikje Coca-Cola (330ml).',
-                'price' => 1.80,
+                'naam' => 'Cola',
+                'beschrijving' => 'Koude blikje Coca-Cola (330ml).',
+                'prijs' => 1.80,
             ],
             [
-                'name' => 'Milkshake aardbei',
-                'description' => 'Verse milkshake met aardbeiensmaak.',
-                'price' => 2.75,
+                'naam' => 'Milkshake aardbei',
+                'beschrijving' => 'Verse milkshake met aardbeiensmaak.',
+                'prijs' => 2.75,
             ],
         ];
 

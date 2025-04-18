@@ -1,0 +1,181 @@
+/* Kleurenpalet: Geel, rood, crème, oranje */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom right, #fff7e6, #ffeaa7);
+    margin: 0;
+    padding: 0;
+    color: #2d3436;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f39c12;
+    padding: 20px 30px;
+    color: white;
+    border-bottom: 5px solid #e74c3c;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-header h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fffde7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.site-content {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #d35400;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ffeaa7;
+    background: #fff9ec;
+    font-size: 1rem;
+}
+
+form button {
+    background: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #c0392b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff3cd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 8px solid #f39c12;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+}
+
+.success-message {
+    background: #d4edda;
+    padding: 15px;
+    border-left: 6px solid #28a745;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #155724;
+}
+
+a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    background: #f39c12;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Specific styling for nav-left, nav-right, and buttons */
+.nav-left a, .nav-right a, .nav-right form {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn.small {
+    background-color: #e74c3c;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn.small:hover {
+    opacity: 0.9;
+}
+.welkom-container {
+    background-color: #fff8dc;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    color: #d97706;
+}
+
+.btn.primary {
+    background-color: #facc15;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn.primary:hover {
+    background-color: #eab308;
+}
